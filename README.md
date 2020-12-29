@@ -190,6 +190,7 @@ anup@megatron:~/hello$ git log --pretty=oneline
 anup@megatron:~/hello$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 
+
 ### 11. Aliases
 
 **01 Define the hist alias in the .gitconfig file**
@@ -201,6 +202,7 @@ anup@megatron:~$ nano /home/anup/.gitconfig
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 ```
 anup@megatron:~/hello$ git hist
+
 
 
 ### 12. Getting older versions
@@ -218,6 +220,7 @@ anup@megatron:~/hello$ cat hello.html
 anup@megatron:~/hello$ git checkout master
 
 anup@megatron:~/hello$ cat hello.html
+
 
 
 ### 13. Tagging versions
@@ -528,7 +531,7 @@ anup@megatron:~/hello$ git checkout -b style
 
 anup@megatron:~/hello$ git status
 
-02 Add style.css file
+**02 Add style.css file**
 
 anup@megatron:~/hello$ touch lib/style.css
 
@@ -541,9 +544,10 @@ h1 {
 ```
 
 anup@megatron:~/hello$ git add lib/style.css
+
 anup@megatron:~/hello$ git commit -m "Added css stylesheet"
 
-03 Change the main page
+**03 Change the main page**
 
 anup@megatron:~/hello$ nano lib/hello.html
 
@@ -560,9 +564,10 @@ anup@megatron:~/hello$ nano lib/hello.html
 ```
 
 anup@megatron:~/hello$ git add lib/hello.html
+
 anup@megatron:~/hello$ git commit -m "Hello uses style.css"
 
-04 Change index.html
+**04 Change index.html**
 
 anup@megatron:~/hello$ nano index.html
 
@@ -578,6 +583,7 @@ anup@megatron:~/hello$ nano index.html
 ```
 
 anup@megatron:~/hello$ git add index.html
+
 anup@megatron:~/hello$ git commit -m "Updated index.html"
 
 anup@megatron:~/hello$ git hist --all
@@ -586,57 +592,67 @@ anup@megatron:~/hello$ git hist --all
 
 ### 24. Navigating Branches
 
-01 Switching to the Master branch
+**01 Switching to the Master branch**
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ git branch
+
 anup@megatron:~/hello$ cat lib/hello.html
 
 
-02 Let us return to the style branch.
+**02 Let us return to the style branch**
 
 anup@megatron:~/hello$ git checkout style
+
 anup@megatron:~/hello$ git branch
+
 anup@megatron:~/hello$ cat lib/hello.html
 
-01 Update the README file with the changes.
+**01 Update the README file with the changes**
 
 anup@megatron:~/hello$ nano README
 
-This is the Hello World example from the git tutorial.
+```This is the Hello World example from the git tutorial.```
 
-02 Commit changes of README file in the master branch.
+**02 Commit changes of README file in the master branch.**
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ git add README
+
 anup@megatron:~/hello$ git commit -m "Added README"
 
 
 
 ### 25. View the different branches
 
-01 View current branches
+**01 View current branches**
 
 anup@megatron:~/hello$ git hist --all
 
 
 
-26. Merging
+### 26. Merging
 
-01 Merging to a single branch
+**01 Merging to a single branch**
 
 anup@megatron:~/hello$ git checkout style
+
 anup@megatron:~/hello$ git branch
+
 anup@megatron:~/hello$ git merge master
+
 anup@megatron:~/hello$ git hist --all
 
 
 
-27. Creating a conflict
+### 27. Creating a conflict
 
-01 Return to the master and create conflict
+**01 Return to the master and create conflict**
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ nano lib/hello.html
 
 ```
@@ -652,23 +668,26 @@ anup@megatron:~/hello$ nano lib/hello.html
 ```
 
 anup@megatron:~/hello$ git add lib/hello.html
+
 anup@megatron:~/hello$ git commit -m 'Life is great!'
 
-02 View branches
+**02 View branches**
 
 anup@megatron:~/hello$ git hist --all
 
 
 
-28. Resolving Conflicts
+### 28. Resolving Conflicts
 
-01 Merge the master branch with style
+**01 Merge the master branch with style**
 
 anup@megatron:~/hello$ git checkout style
+
 anup@megatron:~/hello$ git merge master
+
 anup@megatron:~/hello$ cat lib/hello.html
 
-02 Resolution of the conflict
+**02 Resolution of the conflict**
 
 anup@megatron:~/hello$ nano lib/hello.html
 
@@ -686,9 +705,11 @@ anup@megatron:~/hello$ nano lib/hello.html
 	<h1>Hello, World! Life is great!</h1>
   </body>
 </html>
+```
 
-To,
+**To,**
 
+```
 <!-- Author: Anup Kumar Mondal (anuniqs@gmail.com) -->
 <html>
   <head>
@@ -700,33 +721,40 @@ To,
 </html>
 ```
 
-03 Make a commit of conflict resolution
+**03 Make a commit of conflict resolution**
 
 anup@megatron:~/hello$ git add lib/hello.html
+
 anup@megatron:~/hello$ git commit -m "Merged master fixed conflict."
 
 
 
 ### 29. Resetting the style branch
 
-01 Resetting the style branch
+**01 Resetting the style branch**
 
 anup@megatron:~/hello$ git checkout style
+
 anup@megatron:~/hello$ git hist
+
 anup@megatron:~/hello$ git reset --hard 90ead67
 
-02 Check the branch
+**02 Check the branch**
+
 anup@megatron:~/hello$ git hist --all
 
 
 
 ### 30. Reset of the Master branch
 
-01 Resetting the master branch
+**01 Resetting the master branch**
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ git hist
+
 anup@megatron:~/hello$ git reset --hard 6d14fb1
+
 anup@megatron:~/hello$ git hist --all
 
 
@@ -734,19 +762,23 @@ anup@megatron:~/hello$ git hist --all
 ### 31. Rebase
 
 anup@megatron:~/hello$ git checkout style
+
 anup@megatron:~/hello$ git rebase master
+
 anup@megatron:~/hello$ git hist
 
 
 
 ### 32. Merging to the Master branch
 
-01 Merging style into master
+**01 Merging style into master**
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ git merge style
 
-02 Check the logs
+**02 Check the logs**
+
 anup@megatron:~/hello$ git hist
 
 
@@ -759,22 +791,25 @@ So far we have been working with only one git repository. However, git is great 
 
 ### 34. Cloning repositories
 
-02 Create a clone of the hello repository
+**02 Create a clone of the hello repository**
 
 anup@megatron:~/hello$ cd
+
 anup@megatron:~$ git clone hello cloned_hello
+
 anup@megatron:~$ ls -ltr
 
 
 
 ### 35. Examine the cloned repository
 
-01 Viewing the cloned repository
+**01 Viewing the cloned repository**
 
 anup@megatron:~$ cd cloned_hello/
+
 anup@megatron:~/cloned_hello$ ls -ltr
 
-02 View the history of the cloned repository
+**02 View the history of the cloned repository**
 
 anup@megatron:~/cloned_hello$ git hist --all
 
@@ -783,25 +818,29 @@ anup@megatron:~/cloned_hello$ git hist --all
 ### 36. What is origin?
 
 anup@megatron:~/cloned_hello$ git remote
+
 anup@megatron:~/cloned_hello$ git remote -v
+
 anup@megatron:~/cloned_hello$ git remote show origin
 
 
 
 ### 37. Remote branches
 
-01 List of the remote branches
+**01 List of the remote branches**
 
 anup@megatron:~/cloned_hello$ git branch
+
 anup@megatron:~/cloned_hello$ git branch -a
 
 
 
 ### 38. Changing the original repository
 
-01 Make a change in the original hello repository
+**01 Make a change in the original hello repository**
 
 anup@megatron:~/cloned_hello$ cd ../hello/
+
 anup@megatron:~/hello$ nano README
 
 ```
@@ -810,13 +849,16 @@ This is the Hello World example from the git tutorial.
 ```
 
 anup@megatron:~/hello$ git add README
+
 anup@megatron:~/hello$ git commit -m "Changed README in original repo"
 
 
 ### 39. Fetching changes
 
 anup@megatron:~/hello$ cd ../cloned_hello
+
 anup@megatron:~/cloned_hello$ git fetch
+
 anup@megatron:~/cloned_hello$ git hist --all
 
 anup@megatron:~/cloned_hello$ cat README
@@ -825,7 +867,7 @@ anup@megatron:~/cloned_hello$ cat README
 
 ### 40. Merging pulled changes
 
-01 Merge the pulled changes into the local master branch
+**01 Merge the pulled changes into the local master branch**
 
 anup@megatron:~/cloned_hello$ git merge origin/master
 
@@ -841,21 +883,27 @@ git pull command is identical to git fetch plus git merge
 
 ### 42. Adding a tracking branch
 
-01 Add a local branch tracking the remote branch.
+**01 Add a local branch tracking the remote branch.**
 
 anup@megatron:~/cloned_hello$ git branch --track style origin/style
+
 anup@megatron:~/cloned_hello$ git branch -a
+
 anup@megatron:~/cloned_hello$ git hist --max-count=2
 
 
 ### 43. Bare repos
 
-01 Creating a bare repository
+**01 Creating a bare repository**
 
 anup@megatron:~/cloned_hello$ cd ..
+
 anup@megatron:~$ ls -ltr
+
 anup@megatron:~$ git clone --bare hello hello.git
+
 anup@megatron:~$ ls -ltr
+
 anup@megatron:~$ ls -ltr hello.git/
 
 
@@ -863,6 +911,7 @@ anup@megatron:~$ ls -ltr hello.git/
 ### 44. Adding a remote repository
 
 anup@megatron:~$ cd hello
+
 anup@megatron:~/hello$ git remote add shared ../hello.git
 
 
@@ -877,8 +926,11 @@ This is the Hello World example from the git tutorial.
 ```
 
 anup@megatron:~/hello$ git checkout master
+
 anup@megatron:~/hello$ git add README
+
 anup@megatron:~/hello$ git commit -m "Added shared comment to readme"
+
 anup@megatron:~/hello$ git push shared master
 
 
@@ -886,13 +938,17 @@ anup@megatron:~/hello$ git push shared master
 ### 46. Removing common changes
 
 anup@megatron:~/hello$ cd ../cloned_hello
+
 anup@megatron:~/cloned_hello$ git remote add shared ../hello.git
+
 anup@megatron:~/cloned_hello$ git branch --track shared master
+
 anup@megatron:~/cloned_hello$ git pull shared master
+
 anup@megatron:~/cloned_hello$ cat README
 
 
 
 ### 47. Placing your git repository
 
-01 Run git server
+**01 Run git server**
