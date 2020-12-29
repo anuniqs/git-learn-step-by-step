@@ -1,7 +1,7 @@
 
 ### 1. Installation
 
-01 Installation
+**01 Installation**
 
 anup@megatron:~$ sudo apt-get update
 
@@ -13,7 +13,7 @@ anup@megatron:~$ git --version
 
 ### 2. Preparation
 
-01 Setting up name and e-mail address
+**01 Setting up name and e-mail address**
 
 anup@megatron:~$ git config --global user.name "anuniqs"
 
@@ -29,7 +29,7 @@ anup@megatron:~$ git config --global core.safecrlf warn
 
 ### 3. Creating a Project
 
-01 Create a “Hello, World!” page
+**01 Create a “Hello, World!” page**
 
 anup@megatron:~$ mkdir hello
 
@@ -44,12 +44,12 @@ Hello, World!
 ```
 
 
-02 Create a repository
+**02 Create a repository**
 
 anup@megatron:~/hello$ git init
 
 
-03 Add the page to the repository
+**03 Add the page to the repository**
 
 anup@megatron:~/hello$ git add hello.html
 
@@ -66,7 +66,7 @@ anup@megatron:~/hello$ git status
 
 ### 5. Making changes
 
-01 Changing the “Hello, World” page
+**01 Changing the “Hello, World” page**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -84,7 +84,7 @@ anup@megatron:~/hello$ git add hello.html
 
 anup@megatron:~/hello$ git status
 
-git reset command to unstage these changes
+**git reset command to unstage these changes**
 
 anup@megatron:~/hello$ git reset
 
@@ -119,7 +119,7 @@ anup@megatron:~/hello$ git commit
 
 ### 9. Changes, not files
 
-01 First Change: Adding default page tags
+**01 First Change: Adding default page tags**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -131,12 +131,13 @@ anup@megatron:~/hello$ nano hello.html
 </html>
 ```
 
-02 Add this change
+
+**02 Add this change**
 
 anup@megatron:~/hello$ git add hello.html
 
 
-03 Second change: Add the HTML headers
+**03 Second change: Add the HTML headers**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -150,26 +151,26 @@ anup@megatron:~/hello$ nano hello.html
 </html>
 ```
 
-04 Check the current status
+**04 Check the current status**
 
 anup@megatron:~/hello$ git status
 
 
-05 Commit
+**05 Commit**
 
 anup@megatron:~/hello$ git commit -m "Added standard HTML page tags"
 
 anup@megatron:~/hello$ git status
 
 
-06 Adding the second change
+**06 Adding the second change**
 
 anup@megatron:~/hello$ git add .
 
 anup@megatron:~/hello$ git status
 
 
-07 Commit the second change
+**07 Commit the second change**
 
 anup@megatron:~/hello$ git commit -m "Added HTML header"
 
@@ -179,19 +180,19 @@ anup@megatron:~/hello$ git commit -m "Added HTML header"
 
 anup@megatron:~/hello$ git log
 
-01 One line history
+**01 One line history**
 
 anup@megatron:~/hello$ git log --pretty=oneline
 
 
-04 The ultimate format of the log
+**04 The ultimate format of the log**
 
 anup@megatron:~/hello$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 
 ### 11. Aliases
 
-01 Define the hist alias in the .gitconfig file
+**01 Define the hist alias in the .gitconfig file**
 
 anup@megatron:~$ nano /home/anup/.gitconfig
 ```
@@ -204,7 +205,7 @@ anup@megatron:~/hello$ git hist
 
 ### 12. Getting older versions
 
-01 Getting hashes for the previous versions
+**01 Getting hashes for the previous versions**
 
 anup@megatron:~/hello$ git hist
 
@@ -212,20 +213,21 @@ anup@megatron:~/hello$ git checkout eb748d1
 
 anup@megatron:~/hello$ cat hello.html
 
-02 Returning to the latest version in the master branch
+**02 Returning to the latest version in the master branch**
 
 anup@megatron:~/hello$ git checkout master
 
 anup@megatron:~/hello$ cat hello.html
 
 
-13. Tagging versions
+### 13. Tagging versions
 
-01 Creating a tag for the first version
+**01 Creating a tag for the first version**
 
 anup@megatron:~/hello$ git tag v1
 
-02 Tags for previous versions
+
+**02 Tags for previous versions**
 
 anup@megatron:~/hello$ cat hello.html
 
@@ -235,18 +237,20 @@ anup@megatron:~/hello$ cat hello.html
 
 anup@megatron:~/hello$ git tag v1-beta
 
-03 Check out by the tag name
+
+**03 Check out by the tag name**
 
 anup@megatron:~/hello$ git checkout v1
 
 anup@megatron:~/hello$ git checkout v1-beta
 
 
-04 Viewing tags with the tag command
+**04 Viewing tags with the tag command**
 
 anup@megatron:~/hello$ git tag
 
-05 Viewing tags in logs
+
+**05 Viewing tags in logs**
 
 anup@megatron:~/hello$ git hist master --all
 
@@ -254,11 +258,12 @@ anup@megatron:~/hello$ git hist master --all
 
 ### 14. Discarding local changes (before staging)
 
-01 Checking out the Master branch
+**01 Checking out the Master branch**
 
 anup@megatron:~/hello$ git checkout master
 
-02 Change hello.html
+
+**02 Change hello.html**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -273,11 +278,12 @@ anup@megatron:~/hello$ nano hello.html
 </html>
 ```
 
-03 Check the status
+**03 Check the status**
 
 anup@megatron:~/hello$ git status
 
-04 Undoing the changes in the working directory
+
+**04 Undoing the changes in the working directory**
 
 anup@megatron:~/hello$ git checkout hello.html
 
@@ -289,7 +295,7 @@ anup@megatron:~/hello$ cat hello.html
 
 ### 15. Cancel Staged changes (before committing)
 
-01 Edit file and stage changes
+**01 Edit file and stage changes**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -306,17 +312,19 @@ anup@megatron:~/hello$ nano hello.html
 
 anup@megatron:~/hello$ git add hello.html
 
-02 Check the status
+
+**02 Check the status**
 
 anup@megatron:~/hello$ git status
 
-03 Reset the buffer zone
+**03 Reset the buffer zone**
 
 anup@megatron:~/hello$ git reset HEAD hello.html
 
 anup@megatron:~/hello$ git status
 
-04 Switch to commit version
+
+**04 Switch to commit version**
 
 anup@megatron:~/hello$ git checkout hello.html
 
@@ -326,11 +334,12 @@ anup@megatron:~/hello$ git status
 
 ### 16. Cancelling commits and Removing a commit from a branch
 
-01 Cancelling commits
+**01 Cancelling commits**
 
 To cancel the commit we will create a new commit, cancelling the unwanted changes.
 
-02 Edit the file and make a commit
+
+**02 Edit the file and make a commit**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -349,25 +358,30 @@ anup@megatron:~/hello$ git add hello.html
 
 anup@megatron:~/hello$ git commit -m "Oops, we didn't want this commit"
 
-03 Make a commit with new changes that discard previous changes
+
+**03 Make a commit with new changes that discard previous changes**
 
 anup@megatron:~/hello$ git revert HEAD
 
-04  Check the log
+
+**04  Check the log**
 
 anup@megatron:~/hello$ git hist
 
-05 Mark this branch first
+
+**05 Mark this branch first**
 
 anup@megatron:~/hello$ git tag oops
 
-06 Reset commit to previous Oops
+
+**06 Reset commit to previous Oops**
 
 anup@megatron:~/hello$ git reset --hard v1
 
 anup@megatron:~/hello$ git hist
 
-07  Nothing is ever lost
+
+**07  Nothing is ever lost**
 
 anup@megatron:~/hello$ git hist --all
 
@@ -375,7 +389,7 @@ anup@megatron:~/hello$ git hist --all
 
 ### 17. Removing the oops tag
 
-01 Removal of the oops tag
+**01 Removal of the oops tag**
 
 anup@megatron:~/hello$ git tag -d oops
 
@@ -385,7 +399,7 @@ anup@megatron:~/hello$ git hist --all
 
 ### 18. Changing commits
 
-01 Change the page and commit
+**01 Change the page and commit**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -393,7 +407,7 @@ anup@megatron:~/hello$ git add hello.html
 
 anup@megatron:~/hello$ git commit -m "Add an author comment"
 
-02 Oops... email required
+**02 Oops... email required**
 
 anup@megatron:~/hello$ nano hello.html
 
@@ -408,14 +422,14 @@ anup@megatron:~/hello$ nano hello.html
 </html>
 ```
 
-03 Change the previous commit
+**03 Change the previous commit**
 
 anup@megatron:~/hello$ git add hello.html
 
 anup@megatron:~/hello$ git commit --amend -m "Add an author/email comment"
 
 
-04 View history
+**04 View history**
 
 anup@megatron:~/hello$ git hist
 
@@ -423,7 +437,7 @@ anup@megatron:~/hello$ git hist
 
 ### 19. Moving files
 
-01 Move the hello.html file to the lib directory
+**01 Move the hello.html file to the lib directory**
 
 anup@megatron:~/hello$ mkdir lib
 
@@ -431,7 +445,7 @@ anup@megatron:~/hello$ git mv hello.html lib
 
 anup@megatron:~/hello$ git status
 
-02 Commit new directory
+**02 Commit new directory**
 
 anup@megatron:~/hello$ git commit -m "Moved hello.html to lib"
 
@@ -439,7 +453,7 @@ anup@megatron:~/hello$ git commit -m "Moved hello.html to lib"
 
 ### 20. More information about the structure
 
-01 Adding index.html
+**01 Adding index.html**
 
 anup@megatron:~/hello$ nano index.html
 
@@ -451,23 +465,27 @@ anup@megatron:~/hello$ git commit -m "Added index.html."
 
 ### 21. Inside Git: .Git directory
 
-01 The .git directory
+**01 The .git directory**
 
 anup@megatron:~/hello$ ls -C .git
 
-02 Object Database
+
+**02 Object Database**
 
 anup@megatron:~/hello$ ls -C .git/objects
 
-03 Inquire the database objects
+
+**03 Inquire the database objects**
 
 anup@megatron:~/hello$ ls -C .git/objects/0a
 
-04 Config File
+
+**04 Config File**
 
 anup@megatron:~/hello$ cat .git/config
 
-05 Branches and tags
+
+**05 Branches and tags**
 
 anup@megatron:~/hello$ ls .git/refs
 
@@ -477,7 +495,8 @@ anup@megatron:~/hello$ ls .git/refs/tags
 
 anup@megatron:~/hello$ cat .git/refs/tags/v1
 
-06 HEAD File
+
+**06 HEAD File**
 
 anup@megatron:~/hello$ cat .git/HEAD
 
@@ -485,23 +504,25 @@ anup@megatron:~/hello$ cat .git/HEAD
 
 ### 22. Git inside: Direct work with git objects
 
-01 Searching for the last commit
+**01 Searching for the last commit**
 
 anup@megatron:~/hello$ git hist --max-count=1
 
-02 Display of the last commit
+
+**02 Display of the last commit**
 
 anup@megatron:~/hello$ git cat-file -t 90ead67
 
 anup@megatron:~/hello$ git cat-file -p 90ead67
 
-03 Tree search
+
+**03 Tree search**
 
 
 
 ### 23. Creating a Branch
 
-01 Create a branch
+**01 Create a branch**
 
 anup@megatron:~/hello$ git checkout -b style
 
