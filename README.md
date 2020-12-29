@@ -39,7 +39,9 @@ anup@megatron:~/hello$ touch hello.html
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 Hello, World!
+```
 
 
 02 Create a repository
@@ -68,7 +70,9 @@ anup@megatron:~/hello$ git status
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <h1>Hello, World!</h1>
+```
 
 anup@megatron:~/hello$ git status
 
@@ -93,12 +97,17 @@ anup@megatron:~/hello$ git status
 anup@megatron:~/hello$ touch a.html b.html c.html
 
 anup@megatron:~/hello$ git add a.html
+
 anup@megatron:~/hello$ git add b.html
+
 anup@megatron:~/hello$ git commit -m "modified:   a.html, b.html"
+
 anup@megatron:~/hello$ git status
 
 anup@megatron:~/hello$ git add c.html
+
 anup@megatron:~/hello$ git commit -m "modified:   c.html"
+
 anup@megatron:~/hello$ git status
 
 
@@ -114,12 +123,13 @@ anup@megatron:~/hello$ git commit
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <html>
   <body>
 	<h1>Hello, World!</h1>
   </body>
 </html>
-
+```
 
 02 Add this change
 
@@ -130,6 +140,7 @@ anup@megatron:~/hello$ git add hello.html
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <html>
   <head>
   </head>
@@ -137,7 +148,7 @@ anup@megatron:~/hello$ nano hello.html
 	<h1>Hello, World!</h1>
   </body>
 </html>
-
+```
 
 04 Check the current status
 
@@ -183,11 +194,11 @@ anup@megatron:~/hello$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --d
 01 Define the hist alias in the .gitconfig file
 
 anup@megatron:~$ nano /home/anup/.gitconfig
-
+```
 [alias]
 
 hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-
+```
 anup@megatron:~/hello$ git hist
 
 
@@ -251,6 +262,7 @@ anup@megatron:~/hello$ git checkout master
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <html>
   <head>
   </head>
@@ -259,6 +271,7 @@ anup@megatron:~/hello$ nano hello.html
 	<!-- This is a bad comment.  We want to revert it. -->
   </body>
 </html>
+```
 
 03 Check the status
 
@@ -280,6 +293,7 @@ anup@megatron:~/hello$ cat hello.html
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <html>
   <head>
 	<!-- This is an unwanted but staged comment -->
@@ -288,6 +302,7 @@ anup@megatron:~/hello$ nano hello.html
 	<h1>Hello, World!</h1>
   </body>
 </html>
+```
 
 anup@megatron:~/hello$ git add hello.html
 
@@ -319,6 +334,7 @@ To cancel the commit we will create a new commit, cancelling the unwanted change
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <html>
   <head>
   </head>
@@ -327,6 +343,7 @@ anup@megatron:~/hello$ nano hello.html
 	<!-- This is an unwanted but committed change -->
   </body>
 </html>
+```
 
 anup@megatron:~/hello$ git add hello.html
 
@@ -380,6 +397,7 @@ anup@megatron:~/hello$ git commit -m "Add an author comment"
 
 anup@megatron:~/hello$ nano hello.html
 
+```
 <!-- Author: Anup Kumar Mondal (anuniqs@gmail.com) -->
 <html>
   <head>
@@ -388,6 +406,7 @@ anup@megatron:~/hello$ nano hello.html
 	<h1>Hello, World!</h1>
   </body>
 </html>
+```
 
 03 Change the previous commit
 
@@ -485,16 +504,20 @@ anup@megatron:~/hello$ git cat-file -p 90ead67
 01 Create a branch
 
 anup@megatron:~/hello$ git checkout -b style
+
 anup@megatron:~/hello$ git status
 
 02 Add style.css file
 
 anup@megatron:~/hello$ touch lib/style.css
+
 anup@megatron:~/hello$ nano lib/style.css
 
+```
 h1 {
   color: red;
 }
+```
 
 anup@megatron:~/hello$ git add lib/style.css
 anup@megatron:~/hello$ git commit -m "Added css stylesheet"
@@ -503,6 +526,7 @@ anup@megatron:~/hello$ git commit -m "Added css stylesheet"
 
 anup@megatron:~/hello$ nano lib/hello.html
 
+```
 <!-- Author: Anup Kumar Mondal (anuniqs@gmail.com) -->
 <html>
   <head>
@@ -512,6 +536,7 @@ anup@megatron:~/hello$ nano lib/hello.html
 	<h1>Hello, World!</h1>
   </body>
 </html>
+```
 
 anup@megatron:~/hello$ git add lib/hello.html
 anup@megatron:~/hello$ git commit -m "Hello uses style.css"
@@ -520,6 +545,7 @@ anup@megatron:~/hello$ git commit -m "Hello uses style.css"
 
 anup@megatron:~/hello$ nano index.html
 
+```
 <html>
   <head>
 	<link type="text/css" rel="stylesheet" media="all" href="lib/style.css" />
@@ -528,6 +554,7 @@ anup@megatron:~/hello$ nano index.html
 	<iframe src="lib/hello.html" width="200" height="200" />
   </body>
 </html>
+```
 
 anup@megatron:~/hello$ git add index.html
 anup@megatron:~/hello$ git commit -m "Updated index.html"
@@ -591,6 +618,7 @@ anup@megatron:~/hello$ git hist --all
 anup@megatron:~/hello$ git checkout master
 anup@megatron:~/hello$ nano lib/hello.html
 
+```
 <!-- Author: Anup Kumar Mondal (anuniqs@gmail.com) -->
 <html>
   <head>
@@ -600,6 +628,7 @@ anup@megatron:~/hello$ nano lib/hello.html
 	<h1>Hello, World! Life is great!</h1>
   </body>
 </html>
+```
 
 anup@megatron:~/hello$ git add lib/hello.html
 anup@megatron:~/hello$ git commit -m 'Life is great!'
@@ -622,6 +651,7 @@ anup@megatron:~/hello$ cat lib/hello.html
 
 anup@megatron:~/hello$ nano lib/hello.html
 
+```
 <!-- Author: Anup Kumar Mondal (anuniqs@gmail.com) -->
 <html>
   <head>
@@ -647,7 +677,7 @@ To,
 	<h1>Hello, World! Life is great!</h1>
   </body>
 </html>
-
+```
 
 03 Make a commit of conflict resolution
 
@@ -753,8 +783,10 @@ anup@megatron:~/cloned_hello$ git branch -a
 anup@megatron:~/cloned_hello$ cd ../hello/
 anup@megatron:~/hello$ nano README
 
+```
 This is the Hello World example from the git tutorial.
 (changed in original)
+```
 
 anup@megatron:~/hello$ git add README
 anup@megatron:~/hello$ git commit -m "Changed README in original repo"
@@ -818,8 +850,10 @@ anup@megatron:~/hello$ git remote add shared ../hello.git
 
 anup@megatron:~/hello$ nano README
 
+```
 This is the Hello World example from the git tutorial.
 (Changed in the original and pushed to shared)
+```
 
 anup@megatron:~/hello$ git checkout master
 anup@megatron:~/hello$ git add README
