@@ -1,5 +1,5 @@
 
-### 1. Installation
+### 1. Installation —
 
 **01 Installation**
 
@@ -11,7 +11,7 @@ anup@megatron:~$ git --version
 
 
 
-### 2. Preparation
+### 2. Preparation —
 
 **01 Setting up name and e-mail address**
 
@@ -27,7 +27,7 @@ anup@megatron:~$ git config --global core.safecrlf warn
 
 
 
-### 3. Creating a Project
+### 3. Creating a Project —
 
 **01 Create a “Hello, World!” page**
 
@@ -44,7 +44,7 @@ Hello, World!
 ```
 
 
-**02 Create a repository**
+**02 Create a repository** 
 
 anup@megatron:~/hello$ git init
 
@@ -64,7 +64,7 @@ anup@megatron:~/hello$ git status
 
 
 
-### 5. Making changes
+### 5. Making changes —
 
 **01 Changing the “Hello, World” page**
 
@@ -78,7 +78,7 @@ anup@megatron:~/hello$ git status
 
 
 
-### 6. Staging the changes
+### 6. Staging the changes —
 
 anup@megatron:~/hello$ git add hello.html
 
@@ -92,7 +92,7 @@ anup@megatron:~/hello$ git status
 
 
 
-### 7. Staging and committing
+### 7. Staging and committing —
 
 anup@megatron:~/hello$ touch a.html b.html c.html
 
@@ -112,12 +112,13 @@ anup@megatron:~/hello$ git status
 
 
 
-### 8. Commiting the changes
+### 8. Commiting the changes —
 
 anup@megatron:~/hello$ git commit
 
 
-### 9. Changes, not files
+
+### 9. Changes, not files —
 
 **01 First Change: Adding default page tags**
 
@@ -176,7 +177,7 @@ anup@megatron:~/hello$ git commit -m "Added HTML header"
 
 
 
-### 10. History
+### 10. History —
 
 anup@megatron:~/hello$ git log
 
@@ -191,7 +192,7 @@ anup@megatron:~/hello$ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --d
 
 
 
-### 11. Aliases
+### 11. Aliases —
 
 **01 Define the hist alias in the .gitconfig file**
 
@@ -223,7 +224,7 @@ anup@megatron:~/hello$ cat hello.html
 
 
 
-### 13. Tagging versions
+### 13. Tagging versions —
 
 **01 Creating a tag for the first version**
 
@@ -259,7 +260,7 @@ anup@megatron:~/hello$ git hist master --all
 
 
 
-### 14. Discarding local changes (before staging)
+### 14. Discarding local changes (before staging) —
 
 **01 Checking out the Master branch**
 
@@ -296,7 +297,7 @@ anup@megatron:~/hello$ cat hello.html
 
 
 
-### 15. Cancel Staged changes (before committing)
+### 15. Cancel Staged changes (before committing) —
 
 **01 Edit file and stage changes**
 
@@ -335,7 +336,7 @@ anup@megatron:~/hello$ git status
 
 
 
-### 16. Cancelling commits and Removing a commit from a branch
+### 16. Cancelling commits and Removing a commit from a branch —
 
 **01 Cancelling commits**
 
@@ -390,7 +391,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 17. Removing the oops tag
+### 17. Removing the oops tag —
 
 **01 Removal of the oops tag**
 
@@ -400,7 +401,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 18. Changing commits
+### 18. Changing commits —
 
 **01 Change the page and commit**
 
@@ -438,8 +439,8 @@ anup@megatron:~/hello$ git hist
 
 
 
-### 19. Moving files
-
+### 19. Moving files —
+ 
 **01 Move the hello.html file to the lib directory**
 
 anup@megatron:~/hello$ mkdir lib
@@ -454,7 +455,7 @@ anup@megatron:~/hello$ git commit -m "Moved hello.html to lib"
 
 
 
-### 20. More information about the structure
+### 20. More information about the structure —
 
 **01 Adding index.html**
 
@@ -466,7 +467,7 @@ anup@megatron:~/hello$ git commit -m "Added index.html."
 
 
 
-### 21. Inside Git: .Git directory
+### 21. Inside Git: .Git directory —
 
 **01 The .git directory**
 
@@ -505,7 +506,7 @@ anup@megatron:~/hello$ cat .git/HEAD
 
 
 
-### 22. Git inside: Direct work with git objects
+### 22. Git inside: Direct work with git objects —
 
 **01 Searching for the last commit**
 
@@ -523,7 +524,7 @@ anup@megatron:~/hello$ git cat-file -p 90ead67
 
 
 
-### 23. Creating a Branch
+### 23. Creating a Branch —
 
 **01 Create a branch**
 
@@ -590,7 +591,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 24. Navigating Branches
+### 24. Navigating Branches —
 
 **01 Switching to the Master branch**
 
@@ -625,7 +626,7 @@ anup@megatron:~/hello$ git commit -m "Added README"
 
 
 
-### 25. View the different branches
+### 25. View the different branches —
 
 **01 View current branches**
 
@@ -633,7 +634,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 26. Merging
+### 26. Merging —
 
 **01 Merging to a single branch**
 
@@ -647,7 +648,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 27. Creating a conflict
+### 27. Creating a conflict —
 
 **01 Return to the master and create conflict**
 
@@ -677,7 +678,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 28. Resolving Conflicts
+### 28. Resolving Conflicts —
 
 **01 Merge the master branch with style**
 
@@ -729,7 +730,7 @@ anup@megatron:~/hello$ git commit -m "Merged master fixed conflict."
 
 
 
-### 29. Resetting the style branch
+### 29. Resetting the style branch —
 
 **01 Resetting the style branch**
 
@@ -745,7 +746,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 30. Reset of the Master branch
+### 30. Reset of the Master branch —
 
 **01 Resetting the master branch**
 
@@ -759,7 +760,7 @@ anup@megatron:~/hello$ git hist --all
 
 
 
-### 31. Rebase
+### 31. Rebase —
 
 anup@megatron:~/hello$ git checkout style
 
@@ -769,7 +770,7 @@ anup@megatron:~/hello$ git hist
 
 
 
-### 32. Merging to the Master branch
+### 32. Merging to the Master branch —
 
 **01 Merging style into master**
 
@@ -783,13 +784,13 @@ anup@megatron:~/hello$ git hist
 
 
 
-### 33. Multiple repositories
+### 33. Multiple repositories —
 
 So far we have been working with only one git repository. However, git is great for working with several repositories. These additional repositories can be stored locally, or accessed via network connection.
 
 
 
-### 34. Cloning repositories
+### 34. Cloning repositories —
 
 **02 Create a clone of the hello repository**
 
@@ -801,7 +802,7 @@ anup@megatron:~$ ls -ltr
 
 
 
-### 35. Examine the cloned repository
+### 35. Examine the cloned repository —
 
 **01 Viewing the cloned repository**
 
@@ -815,7 +816,7 @@ anup@megatron:~/cloned_hello$ git hist --all
 
 
 
-### 36. What is origin?
+### 36. What is origin? —
 
 anup@megatron:~/cloned_hello$ git remote
 
@@ -824,8 +825,8 @@ anup@megatron:~/cloned_hello$ git remote -v
 anup@megatron:~/cloned_hello$ git remote show origin
 
 
-
-### 37. Remote branches
+ 
+### 37. Remote branches —
 
 **01 List of the remote branches**
 
@@ -835,7 +836,7 @@ anup@megatron:~/cloned_hello$ git branch -a
 
 
 
-### 38. Changing the original repository
+### 38. Changing the original repository —
 
 **01 Make a change in the original hello repository**
 
@@ -853,7 +854,7 @@ anup@megatron:~/hello$ git add README
 anup@megatron:~/hello$ git commit -m "Changed README in original repo"
 
 
-### 39. Fetching changes
+### 39. Fetching changes —
 
 anup@megatron:~/hello$ cd ../cloned_hello
 
@@ -865,7 +866,7 @@ anup@megatron:~/cloned_hello$ cat README
 
 
 
-### 40. Merging pulled changes
+### 40. Merging pulled changes —
 
 **01 Merge the pulled changes into the local master branch**
 
@@ -875,13 +876,13 @@ anup@megatron:~/cloned_hello$ cat README
 
 
 
-### 41. Pulling and merging changes
+### 41. Pulling and merging changes —
 
 git pull command is identical to git fetch plus git merge
 
 
 
-### 42. Adding a tracking branch
+### 42. Adding a tracking branch —
 
 **01 Add a local branch tracking the remote branch.**
 
@@ -892,7 +893,7 @@ anup@megatron:~/cloned_hello$ git branch -a
 anup@megatron:~/cloned_hello$ git hist --max-count=2
 
 
-### 43. Bare repos
+### 43. Bare repos —
 
 **01 Creating a bare repository**
 
@@ -908,7 +909,7 @@ anup@megatron:~$ ls -ltr hello.git/
 
 
 
-### 44. Adding a remote repository
+### 44. Adding a remote repository —
 
 anup@megatron:~$ cd hello
 
@@ -916,7 +917,7 @@ anup@megatron:~/hello$ git remote add shared ../hello.git
 
 
 
-### 45. Submitting changes
+### 45. Submitting changes —
 
 anup@megatron:~/hello$ nano README
 
@@ -935,7 +936,7 @@ anup@megatron:~/hello$ git push shared master
 
 
 
-### 46. Removing common changes
+### 46. Removing common changes —
 
 anup@megatron:~/hello$ cd ../cloned_hello
 
@@ -949,6 +950,6 @@ anup@megatron:~/cloned_hello$ cat README
 
 
 
-### 47. Placing your git repository
+### 47. Placing your git repository —
 
 **01 Run git server**
