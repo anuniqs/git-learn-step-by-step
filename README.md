@@ -206,7 +206,7 @@ anup@megatron:~/hello$ git hist
 
 
 
-### 12. Getting older versions
+### 12. Getting older versions —
 
 **01 Getting hashes for the previous versions**
 
